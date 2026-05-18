@@ -176,19 +176,19 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-[#f5f0e6] px-4 pb-16 pt-32 md:px-8 md:pt-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/berber-hero.jpg"
-            alt="Vom Berber erkek kuaförü"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-[0.25]"
-          />
+       <div className="absolute inset-0">
+  <Image
+    src="/berber-hero.jpg"
+    alt="Vom Berber erkek kuaförü"
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-center opacity-[0.42] md:opacity-[0.28]"
+  />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#f5f0e6] via-[#f5f0e6]/92 to-[#f5f0e6]/72" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#f5f0e6] via-[#f5f0e6]/25 to-[#f5f0e6]/85" />
-        </div>
+  <div className="absolute inset-0 bg-gradient-to-b from-[#f5f0e6]/75 via-[#f5f0e6]/55 to-[#f5f0e6]/90 md:bg-gradient-to-r md:from-[#f5f0e6] md:via-[#f5f0e6]/90 md:to-[#f5f0e6]/65" />
+  <div className="absolute inset-0 bg-gradient-to-t from-[#f5f0e6] via-transparent to-[#f5f0e6]/40 md:from-[#f5f0e6] md:via-[#f5f0e6]/25 md:to-[#f5f0e6]/80" />
+</div>
 
         <div className="absolute left-[-130px] top-24 h-80 w-80 rounded-full bg-[#cf2935]/10 blur-3xl" />
         <div className="absolute bottom-8 right-[-140px] h-96 w-96 rounded-full bg-[#1f5f9f]/14 blur-3xl" />
