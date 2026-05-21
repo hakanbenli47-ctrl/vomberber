@@ -7,27 +7,33 @@ import {
   MessageCircle,
   MapPin,
   Scissors,
-  Sparkles,
   Clock,
   Star,
   ChevronRight,
+  Mail,
 } from "lucide-react";
 
-const telefon = "05301772962";
+const isletmeAdi = "Baki Demir Hair Barber";
+const telefon = "05411474479";
+const mail = "abdulbakid96@gmail.com";
+const sehirIlce = " Gaziantep / Şehitkamil";
+const adres = "Batıkent Mahallesi Abdulbakir Ateş Caddesi No: 23/A";
 
 const whatsappLink =
-  "https://wa.me/905301772962?text=Merhaba%2C%20Vom%20Berber%20web%20sitesinden%20yaz%C4%B1yorum.%20Randevu%20almak%20istiyorum.";
+  "https://wa.me/905411474479?text=Merhaba%2C%20Baki%20Demir%20Hair%20Barber%20web%20sitesinden%20yaz%C4%B1yorum.%20Randevu%20almak%20istiyorum.";
 
-const aramaLink = "tel:05301772962";
+const aramaLink = "tel:05411474479";
+
+const mailLink = "mailto:abdulbakid96@gmail.com";
 
 const konumLink =
-  "https://www.google.com/maps/search/?api=1&query=Vom%20Berber%20Bursa%20%C4%B0neg%C3%B6l";
+  "https://www.google.com/maps/search/?api=1&query=Baki%20Demir%20Hair%20Barber%20Bat%C4%B1kent%20Mahallesi%20Abdulbakir%20Ate%C5%9F%20Caddesi%20No%2023%2FA%20Ankara%20Yenimahalle";
 
 const hizmetler = [
   {
     baslik: "Saç Kesimi",
     aciklama:
-      "Yüz hattınıza ve tarzınıza uygun, modern ve temiz bitişli erkek saç kesimi.",
+      "Yüz hattınıza, tarzınıza ve günlük kullanımınıza uygun modern erkek saç kesimi.",
     gorsel: "/hizmet-sac-kesim.jpg",
   },
   {
@@ -39,7 +45,7 @@ const hizmetler = [
   {
     baslik: "Saç & Sakal Bakımı",
     aciklama:
-      "Günlük görünümünüzü daha güçlü gösteren, detaylı ve özenli bakım uygulamaları.",
+      "Günlük görünümünüzü daha güçlü gösteren detaylı saç, sakal ve bakım uygulamaları.",
     gorsel: "/hizmet-bakim.jpg",
   },
   {
@@ -82,30 +88,7 @@ function SectionBadge({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-function InstagramIcon({ size = 22 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <rect
-        x="3"
-        y="3"
-        width="18"
-        height="18"
-        rx="5"
-        stroke="currentColor"
-        strokeWidth="2"
-      />
-      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
-      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
-    </svg>
-  );
-}
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f5f0e6] text-[#24211c]">
@@ -122,10 +105,10 @@ export default function Home() {
 
             <div>
               <p className="text-base font-black tracking-wide text-[#24211c]">
-                Vom Berber
+                {isletmeAdi}
               </p>
               <p className="text-xs font-medium text-[#7a6d5a]">
-                Bursa / İnegöl
+                {sehirIlce}
               </p>
             </div>
           </a>
@@ -156,6 +139,7 @@ export default function Home() {
             <a
               href={whatsappLink}
               target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-[#1f5f9f] px-5 py-3 text-sm font-black text-white shadow-md transition hover:bg-[#184c80]"
             >
               WhatsApp
@@ -165,6 +149,7 @@ export default function Home() {
           <a
             href={whatsappLink}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1f5f9f] text-white md:hidden"
           >
             <MessageCircle size={21} />
@@ -176,19 +161,19 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-[#f5f0e6] px-4 pb-16 pt-32 md:px-8 md:pt-28">
-       <div className="absolute inset-0">
-  <Image
-    src="/berber-hero.jpg"
-    alt="Vom Berber erkek kuaförü"
-    fill
-    priority
-    sizes="100vw"
-    className="object-cover object-center opacity-[0.42] md:opacity-[0.28]"
-  />
+        <div className="absolute inset-0">
+          <Image
+            src="/berber-her.jpg"
+            alt="Baki Demir Hair Barber erkek kuaförü"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center opacity-[0.42] md:opacity-[0.28]"
+          />
 
-  <div className="absolute inset-0 bg-gradient-to-b from-[#f5f0e6]/75 via-[#f5f0e6]/55 to-[#f5f0e6]/90 md:bg-gradient-to-r md:from-[#f5f0e6] md:via-[#f5f0e6]/90 md:to-[#f5f0e6]/65" />
-  <div className="absolute inset-0 bg-gradient-to-t from-[#f5f0e6] via-transparent to-[#f5f0e6]/40 md:from-[#f5f0e6] md:via-[#f5f0e6]/25 md:to-[#f5f0e6]/80" />
-</div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#f5f0e6]/75 via-[#f5f0e6]/55 to-[#f5f0e6]/90 md:bg-gradient-to-r md:from-[#f5f0e6] md:via-[#f5f0e6]/90 md:to-[#f5f0e6]/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#f5f0e6] via-transparent to-[#f5f0e6]/40 md:from-[#f5f0e6] md:via-[#f5f0e6]/25 md:to-[#f5f0e6]/80" />
+        </div>
 
         <div className="absolute left-[-130px] top-24 h-80 w-80 rounded-full bg-[#cf2935]/10 blur-3xl" />
         <div className="absolute bottom-8 right-[-140px] h-96 w-96 rounded-full bg-[#1f5f9f]/14 blur-3xl" />
@@ -211,7 +196,7 @@ export default function Home() {
           >
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#d4c2a6] bg-white/75 px-4 py-2 text-sm font-black text-[#7a5a30] shadow-sm backdrop-blur-md">
               <BarberPole className="h-7 w-7" />
-              Bursa İnegöl’de profesyonel erkek kuaförü
+              Batıkent’te profesyonel erkek kuaförü
             </div>
 
             <h1 className="text-4xl font-black leading-[1.08] tracking-tight text-[#24211c] sm:text-5xl md:text-7xl">
@@ -224,16 +209,18 @@ export default function Home() {
             <div className="mt-5 h-2 w-44 rounded-full bg-[repeating-linear-gradient(135deg,#cf2935_0px,#cf2935_18px,#ffffff_18px,#ffffff_34px,#1f5f9f_34px,#1f5f9f_52px,#ffffff_52px,#ffffff_68px)] shadow-sm" />
 
             <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-[#5f574b] md:text-xl md:leading-9">
-              Vom Berber, modern erkek saç kesimi, sakal şekillendirme ve bakım
-              hizmetlerinde detaylara önem veren profesyonel bir kuaför deneyimi
-              sunar. Temiz işçilik, doğru yönlendirme ve tarzınıza uygun sonuç
-              için randevunuzu kolayca oluşturabilirsiniz.
+              Baki Demir Hair Barber, modern erkek saç kesimi, sakal
+              şekillendirme ve bakım hizmetlerinde detaylara önem veren
+              profesyonel bir kuaför deneyimi sunar. Temiz işçilik, doğru
+              yönlendirme ve tarzınıza uygun sonuç için randevunuzu kolayca
+              oluşturabilirsiniz.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
                 href={whatsappLink}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-3 rounded-full bg-[#1f5f9f] px-7 py-4 text-base font-black text-white shadow-xl shadow-[#1f5f9f]/20 transition hover:bg-[#184c80]"
               >
                 <MessageCircle size={21} />
@@ -293,8 +280,8 @@ export default function Home() {
 
               <div className="relative h-full overflow-hidden rounded-[34px]">
                 <Image
-                  src="/berber-giris.jpg"
-                  alt="Vom Berber salon görünümü"
+                  src="/berber-giri.jpg"
+                  alt="Baki Demir Hair Barber salon görünümü"
                   fill
                   sizes="470px"
                   className="object-cover"
@@ -329,7 +316,7 @@ export default function Home() {
           className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr]"
         >
           <div>
-            <SectionBadge>Vom Berber</SectionBadge>
+            <SectionBadge>{isletmeAdi}</SectionBadge>
 
             <h2 className="text-3xl font-black leading-tight text-[#24211c] md:text-5xl">
               Sıradan bir tıraş değil, seni daha iyi gösteren detaylı bir bakım.
@@ -342,8 +329,9 @@ export default function Home() {
             <p className="pr-3 text-lg font-medium leading-9 text-[#5f574b]">
               Erkek kuaföründe iyi sonuç sadece kesimden ibaret değildir. Saç
               yapınız, yüz şekliniz, sakal yoğunluğunuz ve günlük kullanım
-              alışkanlığınız birlikte değerlendirilir. Vom Berber’de amaç; size
-              yakışan, kolay kullanılan ve temiz görünen bir tarz oluşturmaktır.
+              alışkanlığınız birlikte değerlendirilir. Baki Demir Hair
+              Barber’da amaç; size yakışan, kolay kullanılan ve temiz görünen
+              bir tarz oluşturmaktır.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -385,9 +373,8 @@ export default function Home() {
               Saçtan sakala, tüm görünümünüzü tamamlayan profesyonel hizmetler.
             </h2>
             <p className="mt-5 text-lg font-medium leading-8 text-[#6b604f]">
-              Her hizmet alanında fotoğraf kullanabilecek şekilde tasarlandı.
-              Görselleri değiştirdiğinizde bölüm daha güçlü ve güven veren bir
-              vitrine dönüşür.
+              Baki Demir Hair Barber’da erkek saç kesimi, sakal şekillendirme,
+              bakım ve özel gün hazırlıkları profesyonel şekilde sunulur.
             </p>
           </motion.div>
 
@@ -431,6 +418,7 @@ export default function Home() {
                   <a
                     href={whatsappLink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#1f5f9f] px-5 py-3 text-sm font-black text-white transition hover:bg-[#184c80]"
                   >
                     Bu hizmet için randevu al
@@ -478,7 +466,7 @@ export default function Home() {
               >
                 <Image
                   src={gorsel}
-                  alt={`Vom Berber galeri ${index + 1}`}
+                  alt={`Baki Demir Hair Barber galeri ${index + 1}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition duration-700 hover:scale-105"
@@ -503,96 +491,128 @@ export default function Home() {
         >
           <div className="absolute left-0 top-0 h-3 w-full bg-[repeating-linear-gradient(135deg,#cf2935_0px,#cf2935_24px,#ffffff_24px,#ffffff_48px,#1f5f9f_48px,#1f5f9f_72px,#ffffff_72px,#ffffff_96px)]" />
 
-         <div className="flex flex-col gap-4">
-  <a
-    href={whatsappLink}
-    target="_blank"
-    className="flex items-center justify-center gap-3 rounded-full bg-[#1f5f9f] px-7 py-5 text-base font-black text-white transition hover:bg-[#184c80]"
-  >
-    <MessageCircle size={22} />
-    WhatsApp’tan Yaz
-  </a>
+          <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.28em] text-[#cf2935]">
+                Randevu & İletişim
+              </p>
+              <h2 className="mt-4 text-3xl font-black leading-tight md:text-5xl">
+                Temiz, modern ve özenli bir görünüm için randevunuzu oluşturun.
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg font-medium leading-8 text-[#6b604f]">
+                Baki Demir Hair Barber’a WhatsApp üzerinden yazabilir, telefonla
+                arayabilir veya konum bilgisine tek tıkla ulaşabilirsiniz.
+              </p>
+            </div>
 
-  <a
-    href={aramaLink}
-    className="flex items-center justify-center gap-3 rounded-full border border-[#cdbb9f] bg-[#f5efe4] px-7 py-5 text-base font-black text-[#24211c] transition hover:border-[#cf2935] hover:bg-white"
-  >
-    <Phone size={22} />
-    {telefon}
-  </a>
+            <div className="flex flex-col gap-4">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 rounded-full bg-[#1f5f9f] px-7 py-5 text-base font-black text-white transition hover:bg-[#184c80]"
+              >
+                <MessageCircle size={22} />
+                WhatsApp’tan Yaz
+              </a>
 
- <a
-  href="https://www.instagram.com/emirtalha.hair16/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center gap-3 rounded-full border border-[#d4c2a6] bg-white px-7 py-5 text-base font-black text-[#24211c] transition hover:border-[#cf2935] hover:bg-[#fff5f5]"
->
-  <InstagramIcon size={22} />
-  Instagram’da Gör
-</a>
-</div>
+              <a
+                href={aramaLink}
+                className="flex items-center justify-center gap-3 rounded-full border border-[#cdbb9f] bg-[#f5efe4] px-7 py-5 text-base font-black text-[#24211c] transition hover:border-[#cf2935] hover:bg-white"
+              >
+                <Phone size={22} />
+                {telefon}
+              </a>
+
+              <a
+                href={mailLink}
+                className="flex items-center justify-center gap-3 rounded-full border border-[#d4c2a6] bg-white px-7 py-5 text-base font-black text-[#24211c] transition hover:border-[#cf2935] hover:bg-[#fff5f5]"
+              >
+                <Mail size={22} />
+                Mail Gönder
+              </a>
+            </div>
+          </div>
         </motion.div>
       </section>
 
       {/* İLETİŞİM */}
-{/* İLETİŞİM */}
-<section id="iletisim" className="bg-[#eadfce] px-4 py-20 md:px-8">
-  <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
-    <a
-      href={aramaLink}
-      className="group rounded-[32px] border border-[#d4c2a6] bg-[#fffaf1] p-7 shadow-xl shadow-[#59442a]/5 transition hover:-translate-y-1 hover:border-[#cf2935] hover:shadow-2xl hover:shadow-[#59442a]/10"
-    >
-      <Phone className="mb-5 text-[#cf2935] transition group-hover:scale-110" />
-      <h3 className="text-xl font-black text-[#24211c]">Telefon</h3>
-      <p className="mt-3 font-medium text-[#6b604f]">{telefon}</p>
+      <section id="iletisim" className="bg-[#eadfce] px-4 py-20 md:px-8">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
+          <a
+            href={aramaLink}
+            className="group rounded-[32px] border border-[#d4c2a6] bg-[#fffaf1] p-7 shadow-xl shadow-[#59442a]/5 transition hover:-translate-y-1 hover:border-[#cf2935] hover:shadow-2xl hover:shadow-[#59442a]/10"
+          >
+            <Phone className="mb-5 text-[#cf2935] transition group-hover:scale-110" />
+            <h3 className="text-xl font-black text-[#24211c]">Telefon</h3>
+            <p className="mt-3 font-medium text-[#6b604f]">{telefon}</p>
 
-      <p className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#cf2935]">
-        Hemen Ara
-        <ChevronRight size={16} />
-      </p>
-    </a>
+            <p className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#cf2935]">
+              Hemen Ara
+              <ChevronRight size={16} />
+            </p>
+          </a>
 
-    <a
-      href={whatsappLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group rounded-[32px] border border-[#d4c2a6] bg-[#fffaf1] p-7 shadow-xl shadow-[#59442a]/5 transition hover:-translate-y-1 hover:border-[#1f5f9f] hover:shadow-2xl hover:shadow-[#59442a]/10"
-    >
-      <MessageCircle className="mb-5 text-[#1f5f9f] transition group-hover:scale-110" />
-      <h3 className="text-xl font-black text-[#24211c]">WhatsApp</h3>
-      <p className="mt-3 font-medium text-[#6b604f]">
-        Randevu ve bilgi için mesaj atabilirsiniz.
-      </p>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group rounded-[32px] border border-[#d4c2a6] bg-[#fffaf1] p-7 shadow-xl shadow-[#59442a]/5 transition hover:-translate-y-1 hover:border-[#1f5f9f] hover:shadow-2xl hover:shadow-[#59442a]/10"
+          >
+            <MessageCircle className="mb-5 text-[#1f5f9f] transition group-hover:scale-110" />
+            <h3 className="text-xl font-black text-[#24211c]">WhatsApp</h3>
+            <p className="mt-3 font-medium text-[#6b604f]">
+              Randevu ve bilgi için mesaj atabilirsiniz.
+            </p>
 
-      <p className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#1f5f9f]">
-        WhatsApp’tan Yaz
-        <ChevronRight size={16} />
-      </p>
-    </a>
+            <p className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#1f5f9f]">
+              WhatsApp’tan Yaz
+              <ChevronRight size={16} />
+            </p>
+          </a>
 
-    <a
-      href={konumLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group rounded-[32px] border border-[#d4c2a6] bg-[#fffaf1] p-7 shadow-xl shadow-[#59442a]/5 transition hover:-translate-y-1 hover:border-[#cf2935] hover:shadow-2xl hover:shadow-[#59442a]/10"
-    >
-      <MapPin className="mb-5 text-[#cf2935] transition group-hover:scale-110" />
-      <h3 className="text-xl font-black text-[#24211c]">Konum</h3>
-      <p className="mt-3 font-medium text-[#6b604f]">Bursa / İnegöl</p>
+          <a
+            href={mailLink}
+            className="group rounded-[32px] border border-[#d4c2a6] bg-[#fffaf1] p-7 shadow-xl shadow-[#59442a]/5 transition hover:-translate-y-1 hover:border-[#1f5f9f] hover:shadow-2xl hover:shadow-[#59442a]/10"
+          >
+            <Mail className="mb-5 text-[#1f5f9f] transition group-hover:scale-110" />
+            <h3 className="text-xl font-black text-[#24211c]">Mail</h3>
+            <p className="mt-3 break-words font-medium text-[#6b604f]">
+              {mail}
+            </p>
 
-      <p className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#1f5f9f]">
-        Haritada Gör
-        <ChevronRight size={16} />
-      </p>
-    </a>
-  </div>
-</section>
+            <p className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#1f5f9f]">
+              Mail Gönder
+              <ChevronRight size={16} />
+            </p>
+          </a>
+
+          <a
+            href={konumLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group rounded-[32px] border border-[#d4c2a6] bg-[#fffaf1] p-7 shadow-xl shadow-[#59442a]/5 transition hover:-translate-y-1 hover:border-[#cf2935] hover:shadow-2xl hover:shadow-[#59442a]/10"
+          >
+            <MapPin className="mb-5 text-[#cf2935] transition group-hover:scale-110" />
+            <h3 className="text-xl font-black text-[#24211c]">Konum</h3>
+            <p className="mt-3 font-medium text-[#6b604f]">{sehirIlce}</p>
+            <p className="mt-2 text-sm font-medium leading-6 text-[#7a6d5a]">
+              {adres}
+            </p>
+
+            <p className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#1f5f9f]">
+              Haritada Gör
+              <ChevronRight size={16} />
+            </p>
+          </a>
+        </div>
+      </section>
 
       {/* FOOTER */}
       <footer className="border-t border-[#d4c2a6] bg-[#f5f0e6] px-4 py-10 text-center text-[#6b604f] md:px-8">
         <div className="mx-auto mb-5 h-2 max-w-md rounded-full bg-[repeating-linear-gradient(135deg,#cf2935_0px,#cf2935_22px,#ffffff_22px,#ffffff_44px,#1f5f9f_44px,#1f5f9f_66px,#ffffff_66px,#ffffff_88px)]" />
         <p className="text-sm font-medium">
-          © {new Date().getFullYear()} Vom Berber. Bursa İnegöl erkek kuaförü.
+          © {new Date().getFullYear()} {isletmeAdi}. {sehirIlce} erkek kuaförü.
         </p>
       </footer>
 
@@ -609,6 +629,7 @@ export default function Home() {
         <a
           href={whatsappLink}
           target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 rounded-full bg-[#1f5f9f] px-4 py-4 text-sm font-black text-white shadow-2xl shadow-black/10"
         >
           <MessageCircle size={18} />
@@ -620,6 +641,7 @@ export default function Home() {
       <a
         href={whatsappLink}
         target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-7 right-7 z-50 hidden items-center gap-3 overflow-hidden rounded-full bg-[#1f5f9f] px-6 py-4 font-black text-white shadow-2xl shadow-black/20 transition hover:scale-105 md:flex"
       >
         <span className="absolute left-0 top-0 h-full w-2 bg-[repeating-linear-gradient(135deg,#cf2935_0px,#cf2935_10px,#ffffff_10px,#ffffff_20px,#1f5f9f_20px,#1f5f9f_30px)]" />
